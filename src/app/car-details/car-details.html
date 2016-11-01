@@ -1,0 +1,32 @@
+<div ng-controller="CarDetailsController as carDetails">
+<div class="row text-center marginTop-10">
+  <div class="col-xs-12">
+    <h1>Select your car details</h1>
+  </div>
+</div>
+<div class="row car-details text-center">
+  <form id="carDetails" ng-submit="">
+    <div class="form-inline">
+      <div class="col-xs-4">
+        <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-required="required" ng-change="carDetails.getCarMake();">
+          <option value="">{{carDetails.data.option1}}</option>
+          <option value="{{carYear}}" ng-repeat="carYear in carDetails.carYears">{{carYear}}</option>
+        </select>
+        <h1>{{selectedCarYear}}</h1>
+      </div>
+      <div class="col-xs-4">
+        <select class="form-control" id="carMake" name="car_make" ng-required="required" ng-model="selectedCarMake" ng-change="carDetails.getCarModel()">
+          <option>{{carDetails.data.option2}}</option>
+          <option ng-repeat="carMake in carDetails.carMakes">{{carMake.name}}</option>
+        </select>
+      </div>
+      <div class="col-xs-4">
+        <select class="form-control" id="carModel" name="car_model" ng-required="required" ng-model="selectedCarModel">
+          <option>{{carDetails.data.option3}}</option>
+          <option ng-repeat="carModel in carDetails.carModels">{{carModel.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
