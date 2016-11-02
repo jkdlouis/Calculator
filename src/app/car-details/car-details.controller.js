@@ -6,29 +6,28 @@
     .controller('CarDetailsController', CarDetailsController);
 
   /** @ngInject */
-  function CarDetailsController($http, $log, $location, $scope) {
-    var vm = this;
+  function CarDetailsController($http, $log, $location, $scope, $state) {
     // car year options
     var carYears = [];
-    vm.carYears = carYears;
+    $scope.carYears = carYears;
     for (var i = 2017; i >= 1970; i--) {
       carYears.push(i);
     }
 
-    vm.data = {
+    $scope.data = {
       option1: 'Car Year',
       option2: 'Car Make',
       option3: 'Car Model'
     };
 
-    vm.getCarMake = function() {
+    $scope.getCarMake = function() {
       var chosenYear = $scope.selectedCarYear;
       var edmundsUrl = 'https://forms.smartfinancial.com/api/v1/vehicle/makes?year=' + chosenYear + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
 
       if (chosenYear >= 1990) {
         $http.get(edmundsUrl)
           .success(function(result) {
-            vm.carMakes = result.makes;
+            $scope.carMakes = result.makes;
           })
           .error(function(data) {
             $log(data);
@@ -36,18 +35,33 @@
       }
     };
 
-    vm.getCarModel = function() {
+    $scope.getCarModel = function() {
       console.log($scope.selectedCarYear);
       console.log($scope.selectedCarMake);
       var url = 'https://forms.smartfinancial.com/api/v1/vehicle/models?year=' + $scope.selectedCarYear + '&make=' + $scope.selectedCarMake + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
       $http.get(url)
         .success(function(result) {
-          vm.carModels = result.models;
+          $scope.carModels = result.models;
         })
         .error(function(data) {
           $log(data);
         });
 
+    };
+
+    $scope.required = true;
+
+    $scope.goTo = function() {
+      var carYear = $scope.selectedCarYear;
+      var carMake = $scope.selectedCarMake;
+      var carModel = $scope.selectedCarModel;
+      if(carYear !== '' && carMake !== '' && carModel !== '') {
+        $location.path('/state.html');
+      } else if (carYear !== undefined && carMake !== undefined && carModel !== undefined) {
+        $location.path('/state.html');
+      } else {
+        $location.path('/driver-details');
+      }
     };
 
 
@@ -57,11 +71,11 @@
 
     // car makes options
 
-    // vm.getVehicleMakes = function() {
-    //   if (!vm.carYear) {
+    // $scope.getVehicleMakes = function() {
+    //   if (!$scope.carYear) {
     //     $location.path('/car-details');
     //   }
-    //   var chosenYear = parseInt(vm.selectCarYear);
+    //   var chosenYear = parseInt($scope.selectCarYear);
     //   var edmundsUrl = 'https://forms.smartfinancial.com/api/v1/vehicle/makes?year=' + chosenYear + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
     //   var smartUrl = 'https://forms.smartfinancial.com/api/v1/vehicle_makes?callback=JSON_CALLBACK&make_year=' + chosenYear;
     //
@@ -94,9 +108,9 @@
     // };
 
     //
-    // vm.getVehicleModels = function() {
-    //   var url = 'https://forms.smartfinancial.com/api/v1/vehicle/models?year=' + vm.carYear + '&make=' + vm.carMake.name + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
-    //   vm.showLoader = true;
+    // $scope.getVehicleModels = function() {
+    //   var url = 'https://forms.smartfinancial.com/api/v1/vehicle/models?year=' + $scope.carYear + '&make=' + $scope.carMake.name + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
+    //   $scope.showLoader = true;
     //
     //   $http.get(url).then(function success(response) {
     //
@@ -117,7 +131,7 @@
     //
     // }
 
-    // vm.goToIf = function() {
+    // $scope.goToIf = function() {
     //   var carYear = selectCarYear;
     //   var carMake = selectCarMake;
     //   var carModel = selectCarModel;
