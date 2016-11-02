@@ -1,23 +1,28 @@
+<div ng-controller="InsuranceController">
+<div class="insurance">
 <div class="row text-center">
   <div class="col-xs-12">
     <h1>Tell us about your insurance</h1>
   </div>
 </div>
-<div class="row insurance text-center">
+<div class="row text-center">
+  <form id="insuranceForm" name="insuranceForm" ng-submit="goTo()">
   <div class="form-inline">
     <div class="col-xs-6">
       <h3>Your current insurance company</h3>
-      <select class="form-control">
-        <option>Select</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+      <select class="form-control" ng-model="selectedInsuranceCompany" ng-required="required" required>
+        <option value="">{{data.option5}}</option>
+        <option ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
       </select>
     </div>
     <div class="col-xs-4">
       <h3>Your current premium</h3>
-      <input type="text" class="form-control" placeholder="">
+      <input type="number" class="form-control" placeholder="$ 00.00" ng-model="premiumAmount" aria-label="premiumAmount" ng-minlength="3" ng-required="true" required>
+      <span>{{premiumAmount | currency}}</span>
     </div>
   </div>
+    <button class="btn btn-default" ng-submit="goTo()">Next</button>
+  </form>
+</div>
+</div>
 </div>

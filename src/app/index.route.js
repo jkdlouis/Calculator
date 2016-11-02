@@ -8,37 +8,29 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      // .state('home', {
-      //   url: '/',
-      //   templateUrl: 'app/main/main.html',
-      //   controller: 'MainController',
-      //   controllerAs: 'main'
-      // })
 
       .state('car-details', {
         url: '/car-details',
         templateUrl: 'app/car-details/car-details.html',
-        controller: "CarDetailsController",
-        controllerAs: 'carDetails'
+        controller: "CarDetailsController"
       })
 
       .state('state', {
         url: '/state',
-        templateUrl: 'app/state/state.html'
+        templateUrl: 'app/state/state.html',
+        controller: "StateController"
       })
 
       .state('save', {
         url: '/save',
-        templateUrl: 'app/save/save.html'
-        // controller: "SaveController",
-        // controllerAs: 'save'
+        templateUrl: 'app/save/save.html',
+        controller: "SaveController"
       })
 
       .state('insurance', {
         url: '/insurance',
-        templateUrl: 'app/insurance/insurance.html'
-        // controller: "InsuranceController",
-        // controllerAs: 'insurance'
+        templateUrl: 'app/insurance/insurance.html',
+        controller: "InsuranceController"
       });
 
     $urlRouterProvider.otherwise('/');

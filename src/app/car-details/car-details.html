@@ -5,22 +5,22 @@
   </div>
 </div>
 <div class="row car-details text-center">
-  <form id="carDetailsForm" name="carDetailsForm" action="/state">
+  <form id="carDetailsForm" name="carDetailsForm" ng-submit="goTo()">
     <div class="form-inline">
       <div class="col-xs-4">
-        <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-required="required" ng-change="getCarMake();" required>
+        <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-required="true" ng-change="getCarMake();" required>
           <option value="">{{data.option1}}</option>
           <option value="{{carYear}}" ng-repeat="carYear in carYears">{{carYear}}</option>
         </select>
       </div>
       <div class="col-xs-4">
-        <select class="form-control" id="carMake" name="car_make" type="submit" ng-required="required" ng-model="selectedCarMake" ng-change="getCarModel()" required>
+        <select class="form-control" id="carMake" name="car_make" type="submit" ng-required="true" ng-model="selectedCarMake" ng-change="getCarModel()" required>
           <option value="">{{data.option2}}</option>
           <option ng-repeat="carMake in carMakes">{{carMake.name}}</option>
         </select>
       </div>
       <div class="col-xs-4">
-        <select class="form-control" id="carModel" name="car_model" ng-required="required" ng-model="selectedCarModel" required>
+        <select class="form-control" id="carModel" name="car_model" ng-required="true" ng-model="selectedCarModel" required>
           <option value="">{{data.option3}}</option>
           <option ng-repeat="carModel in carModels">{{carModel.name}}</option>
         </select>

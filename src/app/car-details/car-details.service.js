@@ -1,12 +1,25 @@
-(function () {
+(function() {
+  'use strict';
 
   angular
     .module('newCalculator')
-    .factory('DataService', DataService);
+    .factory('carDetailsService', carDetailsService);
 
-  function DataService () {
+  function carDetailsService() {
+    var savedData = '';
 
+    function set(data) {
+      savedData = data;
+    }
+
+    function get() {
+      return savedData;
+    }
+
+    return {
+      set: set,
+      get: get
+    }
   }
-
 
 })();
