@@ -3,9 +3,9 @@
 
   angular
     .module('newCalculator')
-    .factory('carDetailsService', carDetailsService);
+    .factory('insuranceService', insuranceService);
 
-  function carDetailsService() {
+  function insuranceService() {
     var savedData;
 
     return {
@@ -14,9 +14,9 @@
       },
       setData: function(value1, value2, value3) {
         savedData = {
-          year: value1,
-          make: value2,
-          model: value3
+          insuranceCompany: value1,
+          amount: value2,
+          fixedAmount: value3
         }
       }
     };

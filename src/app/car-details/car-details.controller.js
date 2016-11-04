@@ -47,18 +47,16 @@
 
     };
 
-    carDetailsService.set($scope.selectedCarYear);
-    carDetailsService.set($scope.selectedCarMake);
-    carDetailsService.set($scope.selectedCarModel);
-
     $scope.goTo = function() {
       var carYear = $scope.selectedCarYear;
       var carMake = $scope.selectedCarMake;
       var carModel = $scope.selectedCarModel;
       if(carYear !== '' && carMake !== '' && carModel !== '') {
         $location.path('/state');
+        carDetailsService.setData(carYear, carMake, carModel);
       } else if (carYear !== undefined && carMake !== undefined && carModel !== undefined) {
         $location.path('/state');
+        carDetailsService.setData(carYear, carMake, carModel);
       } else {
         $location.path('/driver-details');
       }

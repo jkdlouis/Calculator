@@ -9,11 +9,12 @@
   <div class="col-xs-12">
     <form id="stateForm" name="stateForm" ng-submit="goTo()">
   <div class="form-inline">
-      <select class="form-control" ng-required="true" ng-model="selectedState" required>
-        <option value="">{{data.option4}}</option>
-        <option ng-repeat="state in usStates">{{state.name}}</option>
+    <div class="form-group">
+    <select class="form-control" ng-required="true" ng-model="selectedState" required>
+        <option  class="ng-cloak" value="">{{data.option4}}</option>
+        <option class="ng-cloak" ng-repeat="state in usStates">{{state.name}}</option>
       </select>
-    <h1>{{selectedState}}</h1>
+      </div>
     </div>
       <button class="btn btn-default" type="submit" ng-submit="goTo()">Next</button>
     </form>

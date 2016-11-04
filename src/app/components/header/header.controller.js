@@ -6,14 +6,11 @@
     .controller('HeaderController', HeaderController);
 
   /** @ngInject */
-  function HeaderController($scope, carDetailsService) {
+  function HeaderController($scope, carDetailsService, stateService, insuranceService) {
 
-    $scope.selectedCarYear = carDetailsService.get();
-    $scope.selectedCarMake = carDetailsService.get();
-    $scope.selectedCarModel = carDetailsService.get();
-
-    console.log($scope.selectedCarYear);
-
+    $scope.selectedCarDetails = carDetailsService.getData();
+    $scope.selectedStateHeader = stateService.getData();
+    $scope.selectedInsuranceDetails = insuranceService.getData();
   }
 
 

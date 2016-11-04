@@ -9,17 +9,20 @@
   <form id="insuranceForm" name="insuranceForm" ng-submit="goTo()">
   <div class="form-inline">
     <div class="col-xs-6">
+      <div class="form-group">
       <h3>Your current insurance company</h3>
-      <select class="form-control" ng-model="selectedInsuranceCompany" ng-required="required" required>
-        <option value="">{{data.option5}}</option>
-        <option ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
+      <select class="form-control" ng-model="selectedInsuranceCompany" ng-required="true" required>
+        <option value="" ng-cloak>{{data.option5}}</option>
+        <option ng-cloak ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
       </select>
     </div>
+      </div>
     <div class="col-xs-4">
+      <div class="form-group">
       <h3>Your current premium</h3>
-      <input type="number" class="form-control" placeholder="$ 00.00" ng-model="premiumAmount" aria-label="premiumAmount" ng-minlength="3" ng-required="true" required>
-      <span>{{premiumAmount | currency}}</span>
+        <input type="number" class="form-control" placeholder="$ 00.00" ng-model="premiumAmount" aria-label="premiumAmount" ng-minlength="3" ng-required="true" required>
     </div>
+      </div>
   </div>
     <button class="btn btn-default" ng-submit="goTo()">Next</button>
   </form>

@@ -6,7 +6,7 @@
     .controller('StateController', StateController);
 
   /** @ngInject */
-  function StateController($location, $scope) {
+  function StateController($location, $scope, stateService) {
     $scope.data = {
       option4: 'Select State'
     };
@@ -218,12 +218,15 @@
       }
     ];
 
+
     $scope.goTo = function() {
       var usState = $scope.selectedState;
       if(usState !== '') {
         $location.path('/insurance');
+        stateService.setData($scope.selectedState);
       } else if (usState !== undefined) {
         $location.path('/insurance');
+        stateService.setData($scope.selectedState);
       } else {
         $location.path('/state');
       }

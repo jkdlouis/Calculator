@@ -6,7 +6,7 @@
     .controller('InsuranceController', InsuranceController);
 
   /** @ngInject */
-  function InsuranceController($location, $scope) {
+  function InsuranceController($location, $scope, insuranceService) {
     $scope.data = {
       option5: 'Select Your Insurance Company'
     };
@@ -146,14 +146,16 @@
       }
     ];
 
-
     $scope.goTo = function() {
       var selectedInsuranceCompany = $scope.selectedInsuranceCompany;
       var premiumAmount = $scope.premiumAmount;
+      var fixedAmount = $scope.premiumAmount;
       if(selectedInsuranceCompany !== '' && premiumAmount !== '') {
         $location.path('/save');
+        insuranceService.setData(selectedInsuranceCompany, premiumAmount, fixedAmount);
       } else if (selectedInsuranceCompany !== undefined && premiumAmount !== undefined) {
         $location.path('/save');
+        insuranceService.setData(selectedInsuranceCompany, premiumAmount, fixedAmount);
       } else {
         $location.path('/insurance');
       }

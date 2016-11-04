@@ -9,20 +9,20 @@
     <div class="form-inline">
       <div class="col-xs-4">
         <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-required="true" ng-change="getCarMake();" required>
-          <option value="">{{data.option1}}</option>
+          <option value="" ng-cloak>{{data.option1}}</option>
           <option value="{{carYear}}" ng-repeat="carYear in carYears">{{carYear}}</option>
         </select>
       </div>
       <div class="col-xs-4">
         <select class="form-control" id="carMake" name="car_make" type="submit" ng-required="true" ng-model="selectedCarMake" ng-change="getCarModel()" required>
-          <option value="">{{data.option2}}</option>
-          <option ng-repeat="carMake in carMakes">{{carMake.name}}</option>
+          <option value="" ng-cloak>{{data.option2}}</option>
+          <option ng-repeat="carMake in carMakes" ng-cloak>{{carMake.name}}</option>
         </select>
       </div>
       <div class="col-xs-4">
         <select class="form-control" id="carModel" name="car_model" ng-required="true" ng-model="selectedCarModel" required>
-          <option value="">{{data.option3}}</option>
-          <option ng-repeat="carModel in carModels">{{carModel.name}}</option>
+          <option value="" ng-cloak>{{data.option3}}</option>
+          <option ng-repeat="carModel in carModels" ng-cloak>{{carModel.name}}</option>
         </select>
       </div>
     </div>
