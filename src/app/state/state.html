@@ -10,9 +10,8 @@
     <form id="stateForm" name="stateForm" ng-submit="goTo()">
   <div class="form-inline">
     <div class="form-group">
-    <select class="form-control" ng-required="true" ng-model="selectedState" required>
-        <option  class="ng-cloak" value="">{{data.option4}}</option>
-        <option class="ng-cloak" ng-repeat="state in usStates">{{state.name}}</option>
+    <select class="form-control" ng-required="true" ng-model="selectedState" ng-options="usState.name for usState in usStates" required>
+        <option value="">--Select Your State--</option>
       </select>
       </div>
     </div>

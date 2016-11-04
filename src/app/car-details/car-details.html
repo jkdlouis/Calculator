@@ -8,20 +8,19 @@
   <form id="carDetailsForm" name="carDetailsForm" ng-submit="goTo()">
     <div class="form-inline">
       <div class="col-xs-4">
-        <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-required="true" ng-change="getCarMake();" required>
-          <option value="" ng-cloak>{{data.option1}}</option>
-          <option value="{{carYear}}" ng-repeat="carYear in carYears">{{carYear}}</option>
+        <select class="form-control" id="carYear" name="car_year" ng-model="selectedCarYear" ng-options="carYear for carYear in carYears" ng-required="true" ng-change="getCarMake();" required>
+          <option value="">--Select Car Year--</option>
         </select>
       </div>
       <div class="col-xs-4">
-        <select class="form-control" id="carMake" name="car_make" type="submit" ng-required="true" ng-model="selectedCarMake" ng-change="getCarModel()" required>
-          <option value="" ng-cloak>{{data.option2}}</option>
+        <select class="form-control" id="carMake" name="car_make" ng-model="selectedCarMake" ng-change="getCarModel()" ng-required="true" required>
+          <option value="">--Select Car Make--</option>
           <option ng-repeat="carMake in carMakes" ng-cloak>{{carMake.name}}</option>
         </select>
       </div>
       <div class="col-xs-4">
-        <select class="form-control" id="carModel" name="car_model" ng-required="true" ng-model="selectedCarModel" required>
-          <option value="" ng-cloak>{{data.option3}}</option>
+        <select class="form-control" id="carModel" name="car_model" ng-model="selectedCarModel" ng-required="true" required>
+          <option value="">--Select Car Model</option>
           <option ng-repeat="carModel in carModels" ng-cloak>{{carModel.name}}</option>
         </select>
       </div>

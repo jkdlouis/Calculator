@@ -22,61 +22,6 @@
       }
     };
 
-    // $scope.getDiscount2 = function(discount) {
-    //   var pAmount = $scope.premiumAmount.amount;
-    //   var goodGPA = $scope.goodGPA;
-    //
-    //   if (goodGPA == true ) {
-    //     $scope.premiumAmount.amount = pAmount * discount;
-    //   } else {
-    //     $scope.premiumAmount.amount = pAmount / discount;
-    //   }
-    // };
-    //
-    // $scope.getDiscount3 = function(discount) {
-    //   var pAmount = $scope.premiumAmount.amount;
-    //   var noAcc = $scope.noAccidents;
-    //
-    //   if (noAcc == true ) {
-    //     $scope.premiumAmount.amount = pAmount * discount;
-    //   } else {
-    //     $scope.premiumAmount.amount = pAmount / discount;
-    //   }
-    // };
-    //
-    // $scope.getDiscount4 = function(discount) {
-    //   var pAmount = $scope.premiumAmount.amount;
-    //   var yrExp = $scope.yearsExperience;
-    //
-    //   if (yrExp == true ) {
-    //     $scope.premiumAmount.amount = pAmount * discount;
-    //   } else {
-    //     $scope.premiumAmount.amount = pAmount / discount;
-    //   }
-    // };
-    //
-    // $scope.getDiscount5 = function(discount) {
-    //   var pAmount = $scope.premiumAmount.amount;
-    //   var pFamily = $scope.plusFamily;
-    //
-    //   if (pFamily == true ) {
-    //     $scope.premiumAmount.amount = pAmount * discount;
-    //   } else {
-    //     $scope.premiumAmount.amount = pAmount / discount;
-    //   }
-    // };
-    //
-    // $scope.getDiscount6 = function(discount) {
-    //   var pAmount = $scope.premiumAmount.amount;
-    //   var airBag = $scope.airBag;
-    //
-    //   if (airBag == true ) {
-    //     $scope.premiumAmount.amount = pAmount * discount;
-    //   } else {
-    //     $scope.premiumAmount.amount = pAmount / discount;
-    //   }
-    // };
-
     $scope.data = {
       option5: 'Select'
     };

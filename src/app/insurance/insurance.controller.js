@@ -7,9 +7,6 @@
 
   /** @ngInject */
   function InsuranceController($location, $scope, insuranceService) {
-    $scope.data = {
-      option5: 'Select Your Insurance Company'
-    };
 
     $scope.insuranceCompaies = [
       {

@@ -7,9 +7,6 @@
 
   /** @ngInject */
   function StateController($location, $scope, stateService) {
-    $scope.data = {
-      option4: 'Select State'
-    };
 
     $scope.usStates = [
       {

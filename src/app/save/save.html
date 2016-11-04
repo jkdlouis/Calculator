@@ -8,13 +8,13 @@
         <div class="form-group">
           <h5>Select another insurance company</h5>
           <select class="form-control" ng-model="anotherInsuranceCompany" ng-init="anotherInsuranceCompany = false" ng-required="required" required>
-            <option value="" class="ng-cloak">{{data.option5}}</option>
+            <option value="">--Select--</option>
             <option ng-cloak ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
           </select>
         </div>
         <h5>Check discount to see the possible savings</h5>
         <!--ng-hide-->
-        <div class="canimate-if" ng-if="anotherInsuranceCompany">
+        <div class="animate-if" ng-if="anotherInsuranceCompany">
           <div class="form-group">
             <div class="form-inline">
               <div class="form-group">

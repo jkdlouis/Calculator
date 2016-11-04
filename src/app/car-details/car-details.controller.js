@@ -14,12 +14,6 @@
       carYears.push(i);
     }
 
-    $scope.data = {
-      option1: 'Car Year',
-      option2: 'Car Make',
-      option3: 'Car Model'
-    };
-
     $scope.getCarMake = function() {
       var chosenYear = $scope.selectedCarYear;
       var edmundsUrl = 'https://forms.smartfinancial.com/api/v1/vehicle/makes?year=' + chosenYear + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';

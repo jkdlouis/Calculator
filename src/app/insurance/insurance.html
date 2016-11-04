@@ -12,8 +12,8 @@
       <div class="form-group">
       <h3>Your current insurance company</h3>
       <select class="form-control" ng-model="selectedInsuranceCompany" ng-required="true" required>
-        <option value="" ng-cloak>{{data.option5}}</option>
-        <option ng-cloak ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
+        <option value="">--Select--</option>
+        <option ng-repeat="insuranceCompany in insuranceCompaies" ng-cloak>{{insuranceCompany.name}}</option>
       </select>
     </div>
       </div>
