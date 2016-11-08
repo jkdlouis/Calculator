@@ -6,27 +6,11 @@
     .controller('SaveController', SaveController);
 
   /** @ngInject */
-  function SaveController($location, $scope, insuranceService) {
-    $scope.premiumAmount = insuranceService.getData();
-
-    $scope.fAmount = $scope.premiumAmount.fixedAmount;
-
-    $scope.getDiscount = function(discount, check) {
-      var pAmount = $scope.premiumAmount.amount;
-
-      if( check === true ) {
-        $scope.premiumAmount.amount = pAmount - discount;
-      } else {
-        $scope.premiumAmount.amount = pAmount + discount;
-
-      }
-    };
-
+  function SaveController($scope, insuranceService) {
     $scope.data = {
-      option5: 'Select'
+      option: 'Select'
     };
-
-    $scope.insuranceCompaies = [
+    $scope.insuranceCompanies = [
       {
         name: '21st Century Insurance',
         code: '21st Century Insurance'
@@ -161,21 +145,19 @@
       }
     ];
 
-    $scope.goTo = function() {
-      var usState = $scope.selectedState;
-      if(usState !== '') {
-        $location.path('/insurance');
-      } else if (usState !== undefined) {
-        $location.path('/insurance');
+    $scope.premiumAmount = insuranceService.getData();
+
+    $scope.fAmount = $scope.premiumAmount.fixedAmount;
+
+    $scope.getDiscount = function(discount, check) {
+      var pAmount = $scope.premiumAmount.amount;
+
+      if( check === true ) {
+        $scope.premiumAmount.amount = pAmount - discount;
       } else {
-        $location.path('/state');
+        $scope.premiumAmount.amount = pAmount + discount;
       }
     };
-
-
-
-
-
 
 
   }

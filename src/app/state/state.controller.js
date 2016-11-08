@@ -220,10 +220,10 @@
       var usState = $scope.selectedState;
       if(usState !== '') {
         $location.path('/insurance');
-        stateService.setData($scope.selectedState);
+        stateService.setData(usState);
       } else if (usState !== undefined) {
         $location.path('/insurance');
-        stateService.setData($scope.selectedState);
+        stateService.setData(usState);
       } else {
         $location.path('/state');
       }

@@ -2,8 +2,39 @@
  *  If you want to override some bootstrap variables, you have to change values here.
  *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
  */
-$navbar-inverse-link-color: #5AADBB;
-$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+$darkBlue:          #2a373d;
+$mediumBlue:        #0b4f6c;
+$lightBlue:         #01baef;
+$lightBlueHover:    darken($lightBlue,5%);
+$white:             #fff;
+$whiteDarker:       darken($white,10%);
+$headerGray:        #bbbbbb;
+$darkBlueBorder:    #354147;
+$mediumGray:        #d7d7d7;
+$lightGray:         #fbfbfb;
+$transparentGray:   #ececec;
+$horizontalLines:   darken($transparentGray,5%);
+$black:             #161615;
+$otherGray:         #6d6d6d;
+$faintGray:         #dedede;
+$backGray:          #eee;
+$green:             #20bf55;
+$greenHover:        darken($green,5%);
+$lightGreen:        #f2fff6;
+$borderGray:        #ddd;
+$facebookBlue:      #3b5999;
+$googleplusRed:     #d10700;
+$red:               #ff0000;
+$yellowish:         #fffff4;
+
+$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: 220px;
+$select-height: 40px;
+
+$font-main:     'Lato', sans-serif;
+$font-extra:    'Roboto', sans-serif;
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
@@ -12,8 +43,47 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 // bower:scss
 // endbower
 
-.marginTop-10 {
-  margin-top: 10%;
+body {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.428571429;
+  color: #333333;
+  margin: 0;
+  .form-group select.form-control, .form-group input.form-control {
+    margin-top: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    border: 1px solid $mediumGray;
+    font-size: 16px;
+    width: 30rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+  }
+  .form-group select.form-control:after {
+    background-image: url(assets/images/down-arrow.png);
+    padding: 12px 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+  }
+  select::-ms-expand { /* for IE 11 */
+    display: none;
+  }
+  button.btn {
+    background-color: #00BBF0;
+    color: white;
+    width: 100px;
+    border-radius: 5px;
+  }
+  button.btn:hover {
+    background-color: #1ba392;
+    color: white;
+  }
 }
 
 /**

@@ -1,31 +1,43 @@
 <div ng-controller="InsuranceController">
-<div class="insurance">
-<div class="row text-center">
-  <div class="col-xs-12">
-    <h1>Tell us about your insurance</h1>
-  </div>
-</div>
-<div class="row text-center">
-  <form id="insuranceForm" name="insuranceForm" ng-submit="goTo()">
-  <div class="form-inline">
-    <div class="col-xs-6">
-      <div class="form-group">
-      <h3>Your current insurance company</h3>
-      <select class="form-control" ng-model="selectedInsuranceCompany" ng-required="true" required>
-        <option value="">--Select--</option>
-        <option ng-repeat="insuranceCompany in insuranceCompaies" ng-cloak>{{insuranceCompany.name}}</option>
-      </select>
-    </div>
+  <logo-header></logo-header>
+  <div class="insurance">
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <h1>Tell us about your insurance</h1>
       </div>
-    <div class="col-xs-4">
-      <div class="form-group">
-      <h3>Your current premium</h3>
-        <input type="number" class="form-control" placeholder="$ 00.00" ng-model="premiumAmount" aria-label="premiumAmount" ng-minlength="3" ng-required="true" required>
     </div>
-      </div>
+    <div class="row text-center">
+      <form id="insuranceForm" name="insuranceForm" ng-submit="goTo(insuranceForm.$invalid)" novalidate>
+        <div class="form-inline">
+          <div class="col-xs-6">
+            <div class="form-group"
+                 ng-class="{'has-error' : insuranceForm.insuranceComp.$invalid && insuranceForm.insuranceComp.$dirty}">
+              <h3>Your current insurance company</h3>
+              <select class="form-control" name="insuranceComp" ng-model="selectedInsuranceCom"
+                      ng-options="insuranceComp.name for insuranceComp in insuranceCompanies" ng-required="true"
+                      required>
+                <option value="">Select</option>
+              </select>
+              <p ng-show="insuranceForm.insuranceComp.$invalid && insuranceForm.insuranceComp.$dirty">This field is
+                required</p>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group"
+                 ng-class="{'has-error' : insuranceForm.premiumAmount.$invalid && insuranceForm.premiumAmount.$dirty}">
+              <h3>Your current premium</h3>
+              <input type="number" class="form-control" name="premiumAmount" placeholder="$ 00.00"
+                     ng-model="premiumAmount" aria-label="premiumAmount" ng-minlength="3" ng-required="true" required>
+            <p ng-show="insuranceForm.premiumAmount.$invalid && insuranceForm.premiumAmount.$dirty">This field is
+              required</p>
+          </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+          <button class="btn btn-lg" ng-click="goTo(insuranceForm.$invalid)" ng-disabled="insuranceForm.$invalid">Next
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-    <button class="btn btn-default" ng-submit="goTo()">Next</button>
-  </form>
-</div>
-</div>
 </div>

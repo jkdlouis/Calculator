@@ -7,6 +7,7 @@
 
   /** @ngInject */
   function CarDetailsController($http, $log, $location, $scope, carDetailsService) {
+
     // car year options
     var carYears = [];
     $scope.carYears = carYears;
@@ -30,6 +31,7 @@
     };
 
     $scope.getCarModel = function() {
+      console.log($scope.selectedCarMake);
       var url = 'https://forms.smartfinancial.com/api/v1/vehicle/models?year=' + $scope.selectedCarYear + '&make=' + $scope.selectedCarMake + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
       $http.get(url)
         .success(function(result) {

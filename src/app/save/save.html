@@ -1,5 +1,5 @@
 <div ng-controller="SaveController">
-
+  <logo-header></logo-header>
   <cal-header></cal-header>
   <div class="row save">
     <h2>Try how much you could save</h2>
@@ -7,15 +7,14 @@
       <div class="col-xs-4">
         <div class="form-group">
           <h5>Select another insurance company</h5>
-          <select class="form-control" ng-model="anotherInsuranceCompany" ng-init="anotherInsuranceCompany = false" ng-required="required" required>
-            <option value="">--Select--</option>
-            <option ng-cloak ng-repeat="insuranceCompany in insuranceCompaies">{{insuranceCompany.name}}</option>
+          <select class="form-control" ng-model="anotherInsuranceComp" ng-options="insuranceComp.name for insuranceComp in insuranceCompanies" ng-init="anotherInsuranceComp = false" ng-required="true" required>
+            <option value="">Select</option>
           </select>
         </div>
-        <h5>Check discount to see the possible savings</h5>
         <!--ng-hide-->
-        <div class="animate-if" ng-if="anotherInsuranceCompany">
+        <div class="animate-if" ng-if="anotherInsuranceComp">
           <div class="form-group">
+            <h5>Check discount to see the possible savings</h5>
             <div class="form-inline">
               <div class="form-group">
                 <label class="checkbox-inline">
