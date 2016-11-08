@@ -145,6 +145,7 @@
 
     $scope.goTo = function() {
       var selectedInsuranceComp = $scope.selectedInsuranceComp;
+      console.log(selectedInsuranceComp);
       var premiumAmount = $scope.premiumAmount;
       var fixedAmount = $scope.premiumAmount;
       if(selectedInsuranceComp !== '' && premiumAmount !== '') {

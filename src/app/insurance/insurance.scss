@@ -1,10 +1,20 @@
 .insurance {
   padding: 2rem;
   h1 {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
   h3 {
     margin-top: 30px;
+  }
+  .form-group:after {
+    top:112px;
+    right: 40px;
+  }
+  .form-group.pAmount:after {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
   .form-group input{
     width: 30rem;

@@ -1,7 +1,10 @@
 .state {
   padding: 2rem;
-  select {
-    margin-top: 50px;
+  .form-group select.form-control {
+    margin-top: 90px;
+  }
+  .form-group:after {
+    top: 96px;
   }
   .btn {
     margin-top: 100px;
