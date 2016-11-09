@@ -15,30 +15,30 @@
         <!--ng-hide-->
         <div class="animate-if" ng-if="anotherInsuranceComp">
           <div class="form-group checkbox-group">
-            <h5>Check discount to see the possible savings</h5>
+            <h5>Check discount to see the possible savings:</h5>
             <div class="wrapper">
               <div class="form-inline">
                 <label class="checkbox-inline">
-                  <input type="checkbox" value="Multiple Driver" ng-model="multipleDrivers" ng-change="getDiscount(0.2*fAmount, multipleDrivers);"> Multiple Drivers
+                  <input type="checkbox" value="Multiple Driver" ng-model="multipleDrivers" ng-change="getDiscount(0.2*fAmount, multipleDrivers);"><i ng-class="multipleDrivers? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> Multiple Drivers
                 </label>
                 <label class="checkbox-inline">
-                  <input type="checkbox" value="Good GPA" ng-model="goodGPA" ng-change="getDiscount(0.05*fAmount, goodGPA)"> Good GPA
-                </label>
-            </div>
-            <div class="form-inline">
-                <label class="checkbox-inline">
-                  <input type="checkbox"  value="No Accidents" ng-model="noAccidents" ng-change="getDiscount(0.15*fAmount, noAccidents)"> No Accidents
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox"  value="10+ Years of Experience" ng-model="yearsExperience" ng-change="getDiscount(0.10*fAmount, yearsExperience)"> 10+ Years of Experience
+                  <input type="checkbox" value="Good GPA" ng-model="goodGPA" ng-change="getDiscount(0.05*fAmount, goodGPA)"><i ng-class="goodGPA? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> Good GPA
                 </label>
             </div>
             <div class="form-inline">
                 <label class="checkbox-inline">
-                  <input type="checkbox"  value="5+ Family" ng-model="plusFamily" ng-change="getDiscount(0.05*fAmount, plusFamily)"> 5+ Family
+                  <input type="checkbox"  value="No Accidents" ng-model="noAccidents" ng-change="getDiscount(0.15*fAmount, noAccidents)"><i ng-class="noAccidents? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> No Accidents
                 </label>
                 <label class="checkbox-inline">
-                  <input type="checkbox"  value="Air Bag" ng-model="airBag" ng-change="getDiscount(0.01*fAmount, airBag)"> Air Bag
+                  <input type="checkbox"  value="10+ Years of Experience" ng-model="yearsExperience" ng-change="getDiscount(0.10*fAmount, yearsExperience)"><i ng-class="yearsExperience? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> 10+ Years of Experience
+                </label>
+            </div>
+            <div class="form-inline">
+                <label class="checkbox-inline">
+                  <input type="checkbox"  value="5+ Family" ng-model="plusFamily" ng-change="getDiscount(0.05*fAmount, plusFamily)"><i ng-class="plusFamily? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> 5+ Family
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox"  value="Air Bag" ng-model="airBag" ng-change="getDiscount(0.01*fAmount, airBag)"><i ng-class="airBag? 'fa fa-check-square-o fa-lg' : 'fa fa-square-o fa-lg'" aria-hidden="true"></i> Air Bag
                 </label>
               </div>
             </div>
@@ -50,15 +50,15 @@
     <div class="col-xs-6 pull-right">
       <div class="premium-box">
         <h3>Your Premium</h3>
-        <h4 ng-cloak>{{premiumAmount.amount}}</h4>
+        <h2 ng-cloak>{{premiumAmount.amount | currency}}</h2>
         <p>Annually</p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <div class="pop-up-box">
-          <h5>This calculator shows approximate values</h5>
-          <h5>You could actually be paying even less for your insurance</h5>
+          <p>This calculator shows approximate values</p>
+          <p>You could actually be paying even less for your insurance</p>
           <p><a href="http://illinoisinsurance.com/quote_inhouse.html?lead_type=auto">Use our comparison tool for free and get offer matched exactly to your needs in less than 2 minutes</a></p>
           <button type="button" class="btn btn-primary" id="get_quotes"><a href="http://illinoisinsurance.com/quote_inhouse.html?lead_type=auto">Compare Real Quotes Now</a></button>
           <p>(Other people save up to 23% on average)</p>

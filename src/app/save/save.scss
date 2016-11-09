@@ -7,28 +7,33 @@
   }
   h5 {
     margin-left: -10px;
-  }
-  .form-group select.form-control {
-    margin-top: 20px;
-  }
-  .form-group:after {
-    top: 45px;
-    right: 200px;
-    padding: 0 15px 2px;
-  }
-  .form-group.checkbox-group:after {
-    display: none;
+    font-weight: bold;
   }
   form {
+    .form-group select.form-control {
+      margin-top: 20px;
+    }
+    .form-group:after {
+      top: 45px;
+      right: 200px;
+      padding: 0 15px 2px;
+    }
+    .form-group.checkbox-group:after {
+      display: none;
+    }
     .wrapper {
       display: flex;
       display: -webkit-flex;
       align-items: flex-start;
       width: 100%;
       label.checkbox-inline {
-        margin: 10px 45px 10px 10px;
+        margin: 10px 45px 10px -10px;
         padding-left: 0;
       }
+    }
+    input[type=checkbox] {
+      display: none;
+      cursor: pointer;
     }
   }
   .animate-if {
@@ -51,13 +56,16 @@
   }
   .premium-box {
     border: 1px solid $mediumGray;
-    background-color: lightyellow;
-    width: 25rem;
+    background-color: #59DA9A;
+    width: 23rem;
     padding: 10px;
-    margin-left: 50px;
+    margin-left: 65px;
     margin-top: 20px;
-    h4 {
+    text-align: center;
+    color: white;
+    h2 {
       color: darkred;
+      font-weight: bold;
     }
   }
   .pop-up-box {
@@ -67,6 +75,7 @@
     margin-top: 50px;
     button {
       width: 200px;
+      margin-bottom: 10px;
     }
     button a {
       color: white;

@@ -1,6 +1,11 @@
 .car-details {
   padding: 2rem;
-  .btn {
-    margin-top: 150px;
+  h2 {
+    position: relative;
+  }
+  button {
+    position: absolute;
+    top:80%;
+    right: 45%;
   }
 }

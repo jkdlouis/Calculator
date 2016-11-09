@@ -6,7 +6,9 @@
   .form-group:after {
     top: 96px;
   }
-  .btn {
-    margin-top: 100px;
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 45%;
   }
 }

@@ -7,9 +7,7 @@
 
   /** @ngInject */
   function SaveController($scope, insuranceService) {
-    $scope.data = {
-      option: 'Select'
-    };
+
     $scope.insuranceCompanies = [
       {
         name: '21st Century Insurance',

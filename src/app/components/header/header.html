@@ -3,9 +3,9 @@
   <div class="col-xs-12">
     <h3>Your Information</h3>
     <ul class="list-inline list-unstyled" ng-cloak>
-      <li>Car: {{selectedCarDetails.year}} {{selectedCarDetails.make}} {{selectedCarDetails.model}}</li>
-      <li>State: {{selectedStateHeader.name}}</li>
-      <li>Insurance Company: {{selectedInsuranceDetails.insuranceCompany.name}}</li>
+      <li>Car:  <span><a href="#/car-details">{{selectedCarDetails.year}} {{selectedCarDetails.make}} {{selectedCarDetails.model}}</a></span></li>
+      <li>State:  <span><a href="#/state">{{selectedStateHeader.name}}</a></span></li>
+      <li>Insurance Company:  <span><a href="#/insurance">{{selectedInsuranceDetails.insuranceCompany.name}}</a></span></li>
     </ul>
   </div>
 </div>

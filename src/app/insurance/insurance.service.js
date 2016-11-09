@@ -12,12 +12,11 @@
       getData: function() {
         return savedData;
       },
-      setData: function(value1, value2, value3, value4) {
+      setData: function(value1, value2, value3) {
         savedData = {
           insuranceCompany: value1,
           amount: value2,
           fixedAmount: value3,
-          insuranceCompanyList: value4
         }
       }
     };

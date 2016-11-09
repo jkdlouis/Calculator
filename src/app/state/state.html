@@ -3,7 +3,7 @@
   <div class="state">
 <div class="row text-center">
   <div class="col-xs-12">
-    <h1>Which State Do You Currently Live in?</h1>
+    <h2>Which state do you currently live in?</h2>
   </div>
 </div>
 <div class="row text-center">
@@ -17,7 +17,9 @@
       <p ng-show="stateForm.usState.$invalid && stateForm.usState.$dirty">This field is required</p>
     </div>
     </div>
-      <button class="btn btn-lg" type="submit" ng-click="goTo(stateForm.$invalid)" ng-disabled="stateForm.$invalid">Next</button>
+
+        <button class="btn btn-lg" type="submit" ng-click="goTo(stateForm.$invalid)" ng-disabled="stateForm.$invalid">Next</button>
+
     </form>
   </div>
 </div>
