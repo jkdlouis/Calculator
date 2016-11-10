@@ -6,3 +6,12 @@
     max-width: 25%;
   }
 }
+
+@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+and (orientation: portrait) {
+  .logoHeader {
+    img {
+      min-width: 90%;
+    }
+  }
+}

@@ -1,5 +1,4 @@
 .header {
-  margin-left: 14%;
   ul {
     margin-top: 30px;
     li {
@@ -11,4 +10,15 @@
   }
 }
 
-
+@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+and (orientation: portrait) {
+  .header {
+    padding: 1rem;
+    ul {
+      margin-top: 10px;
+      li {
+        margin-right: 5px;
+      }
+    }
+  }
+}

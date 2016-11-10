@@ -1,8 +1,6 @@
 .save {
-  padding: 2rem;
-  margin-left: 15%;
   h2 {
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 20px;
   }
   h5 {
@@ -15,7 +13,7 @@
     }
     .form-group:after {
       top: 45px;
-      right: 200px;
+      right: 220px;
       padding: 0 15px 2px;
     }
     .form-group.checkbox-group:after {
@@ -24,8 +22,9 @@
     .wrapper {
       display: flex;
       display: -webkit-flex;
-      align-items: flex-start;
-      width: 100%;
+      align-items: flex-end;
+      flex-direction: row;
+      flex-wrap: wrap;
       label.checkbox-inline {
         margin: 10px 45px 10px -10px;
         padding-left: 0;
@@ -70,7 +69,6 @@
   }
   .pop-up-box {
     background-color: orange;
-    width: 84rem;
     padding: 20px;
     margin-top: 50px;
     button {
@@ -83,3 +81,93 @@
   }
   }
 
+//all major mobile
+
+@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+and (orientation: portrait) {
+  .save {
+    padding: 1rem;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 16px;
+      margin-left: -15px;
+    }
+    form {
+      .wrapper {
+        align-items: baseline;
+        flex-direction: column;
+        label.checkbox-inline {
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+      .form-group {
+        margin-bottom: 10px;
+        select.form-control {
+          margin-left: -15px;
+        }
+      }
+      .form-group:after {
+        right: 15px;
+        top: 43px;
+      }
+    }
+    .animate-if {
+      padding: 5px;
+    }
+    .premium-box {
+      margin-top: 0;
+      margin-left: 33px;
+    }
+    .pop-up-box {
+      margin-top: 10px;
+    }
+  }
+}
+
+//iphone 5 mobile
+
+@media only screen and (device-width : 320px) and (orientation : portrait) {
+  .save {
+    h2 {
+      font-size: 18px;
+    }
+    h4 {
+      font-size: 13px;
+    }
+    form {
+      .form-group:after {
+        top: 40px;
+        right: 16px;
+      }
+      .form-group select.form-control {
+        font-size: 12px;
+      }
+    }
+    .premium-box {
+      margin-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//ipad
+
+@media only screen and (device-width: 768px) and (orientation : portrait) {
+  .save {
+    form {
+      .form-group:after {
+        left: 0;
+        left: 250px;
+      }
+    }
+    .premium-box {
+      margin-left: 95px;
+    }
+  }
+}

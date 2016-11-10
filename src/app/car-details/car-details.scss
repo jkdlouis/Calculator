@@ -1,11 +1,28 @@
 .car-details {
-  padding: 2rem;
-  h2 {
-    position: relative;
-  }
   button {
     position: absolute;
-    top:80%;
+    bottom: 50px;
     right: 45%;
+  }
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+and (orientation: portrait) {
+  .car-details {
+    padding: 1rem;
+    button {
+      right: 38%;
+      bottom: 8rem;
+    }
+  }
+}
+
+//ipad
+
+@media only screen and (device-width: 768px) and (orientation : portrait) {
+  .car-details {
+    button {
+      bottom: 40rem;
+    }
   }
 }

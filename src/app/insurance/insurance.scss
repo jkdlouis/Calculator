@@ -1,8 +1,6 @@
 .insurance {
-  padding: 2rem;
   h2 {
     margin-bottom: 50px;
-    position: relative;
   }
   h4 {
     margin-top: 30px;
@@ -26,7 +24,35 @@
   }
   button {
     position: absolute;
-    top: 100px;
+    bottom: 50px;
     right: 45%;
+  }
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+and (orientation: portrait) {
+  .insurance {
+    padding: 1rem;
+    h2 {
+      margin-bottom: 10px;
+    }
+    .form-group input {
+      width: 100%;
+    }
+    .form-group:after {
+      top: 45px;
+    }
+    button {
+      right: 38%;
+      bottom: 6rem;
+    }
+  }
+}
+
+@media only screen and (device-width: 768px) and (orientation : portrait) {
+  .insurance {
+    button {
+      bottom: 40rem;
+    }
   }
 }

@@ -9,7 +9,7 @@
     <div class="row text-center">
       <form id="insuranceForm" name="insuranceForm" ng-submit="goTo(insuranceForm.$invalid)" novalidate>
         <div class="form-inline">
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group"
                  ng-class="{'has-error' : insuranceForm.insuranceComp.$invalid && insuranceForm.insuranceComp.$dirty}">
               <h4>Your current insurance company</h4>
@@ -22,7 +22,7 @@
                 required</p>
             </div>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group pAmount"
                  ng-class="{'has-error' : insuranceForm.premiumAmount.$invalid && insuranceForm.premiumAmount.$dirty}">
               <h4>Your current premium</h4>
@@ -33,10 +33,7 @@
           </div>
             </div>
         </div>
-        <div class="col-xs-12">
-          <button class="btn btn-lg" ng-click="goTo(insuranceForm.$invalid)" ng-disabled="insuranceForm.$invalid">Next
-          </button>
-        </div>
+          <button class="btn btn-lg" ng-click="goTo(insuranceForm.$invalid)" ng-disabled="insuranceForm.$invalid">Next</button>
       </form>
     </div>
   </div>

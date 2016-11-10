@@ -9,7 +9,7 @@
 <div class="row car-details text-center">
   <form id="carDetailsForm" name="carDetailsForm" ng-submit="goTo(carDetailsForm.$invalid)" novalidate>
     <div class="form-inline">
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <div class="form-group" ng-class="{'has-error' : carDetailsForm.carYear.$invalid && carDetailsForm.carYear.$dirty}">
         <select class="form-control" id="carYear" name="carYear" ng-model="selectedCarYear" ng-options="carYear for carYear in carYears" ng-required="true" ng-change="getCarMake();" required>
           <option value="">Select Car Year</option>
@@ -17,7 +17,7 @@
           <p ng-show="carDetailsForm.carYear.$invalid && carDetailsForm.carYear.$dirty">This field is required</p>
         </div>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <div class="form-group" ng-class="{'has-error' : carDetailsForm.carMake.$invalid && carDetailsForm.carMake.$dirty}">
           <select class="form-control" id="carMake" name="carMake" ng-model="selectedCarMake" ng-change="getCarModel()" ng-required="true" required>
             <option value="">Select Car Make</option>
@@ -26,7 +26,7 @@
           <p ng-show="carDetailsForm.carMake.$invalid && carDetailsForm.carMake.$dirty">This field is required</p>
         </div>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-md-4">
         <div class="form-group" ng-class="{'has-error' : carDetailsForm.carModel.$invalid && carDetailsForm.carModel.$dirty}">
         <select class="form-control" id="carModel" name="carModel" ng-model="selectedCarModel" ng-required="true" required>
           <option value="">Select Car Model</option>
