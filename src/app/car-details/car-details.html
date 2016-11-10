@@ -12,7 +12,7 @@
       <div class="col-xs-12 col-md-4">
         <div class="form-group" ng-class="{'has-error' : carDetailsForm.carYear.$invalid && carDetailsForm.carYear.$dirty}">
         <select class="form-control" id="carYear" name="carYear" ng-model="selectedCarYear" ng-options="carYear for carYear in carYears" ng-required="true" ng-change="getCarMake();" required>
-          <option value="">Select Car Year</option>
+            <option value="">Select Car Year</option>
         </select>
           <p ng-show="carDetailsForm.carYear.$invalid && carDetailsForm.carYear.$dirty">This field is required</p>
         </div>

@@ -3,17 +3,16 @@
     margin-top: 0;
     margin-bottom: 20px;
   }
-  h5 {
-    margin-left: -10px;
-    font-weight: bold;
-  }
   form {
+    .form-group {
+      margin-left: -3%;
+    }
     .form-group select.form-control {
       margin-top: 20px;
     }
     .form-group:after {
       top: 45px;
-      right: 220px;
+      right: 44%;
       padding: 0 15px 2px;
     }
     .form-group.checkbox-group:after {
@@ -25,6 +24,7 @@
       align-items: flex-end;
       flex-direction: row;
       flex-wrap: wrap;
+      margin-left: 2%;
       label.checkbox-inline {
         margin: 10px 45px 10px -10px;
         padding-left: 0;
@@ -58,7 +58,6 @@
     background-color: #59DA9A;
     width: 23rem;
     padding: 10px;
-    margin-left: 65px;
     margin-top: 20px;
     text-align: center;
     color: white;
@@ -81,7 +80,7 @@
   }
   }
 
-//all major mobile
+//mobile portrait
 
 @media screen and (min-device-width: 300px) and (max-device-width: 450px)
 and (orientation: portrait) {
@@ -90,16 +89,17 @@ and (orientation: portrait) {
     h2 {
       margin-top: 0;
       margin-bottom: 10px;
-      font-size: 22px;
+      font-size: 21px;
     }
     h4 {
       font-size: 16px;
-      margin-left: -15px;
+      margin-left: -6%;
     }
     form {
       .wrapper {
         align-items: baseline;
         flex-direction: column;
+        margin-left: 4%;
         label.checkbox-inline {
           font-size: 12px;
           width: 100%;
@@ -108,11 +108,11 @@ and (orientation: portrait) {
       .form-group {
         margin-bottom: 10px;
         select.form-control {
-          margin-left: -15px;
+          margin-left: -6%;
         }
       }
       .form-group:after {
-        right: 15px;
+        right: 7%;
         top: 43px;
       }
     }
@@ -120,13 +120,33 @@ and (orientation: portrait) {
       padding: 5px;
     }
     .premium-box {
-      margin-top: 0;
-      margin-left: 33px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: 12%;
     }
     .pop-up-box {
       margin-top: 10px;
     }
   }
+}
+
+//mobile landscape
+
+@media (min-width:550px) and (max-width:750px) and (orientation: landscape) {
+   .save {
+     form {
+       .form-group:after {
+         top: 50%;
+         right: 50%;
+       }
+       .form-group select.form-control {
+         margin-left: 0;
+       }
+     }
+     .premium-box {
+       margin-left: 17%;
+     }
+   }
 }
 
 //iphone 5 mobile
@@ -142,14 +162,14 @@ and (orientation: portrait) {
     form {
       .form-group:after {
         top: 40px;
-        right: 16px;
+        right: 7%;
       }
       .form-group select.form-control {
         font-size: 12px;
       }
     }
     .premium-box {
-      margin-left: 25px;
+      margin-left: 12%;
       margin-top: 10px;
       margin-bottom: 10px;
     }
@@ -162,12 +182,21 @@ and (orientation: portrait) {
   .save {
     form {
       .form-group:after {
-        left: 0;
-        left: 250px;
+        left: 38%;
       }
     }
     .premium-box {
-      margin-left: 95px;
+      margin-left: 17%;
+    }
+  }
+}
+
+@media only screen and (device-width: 1024px) and (orientation : landscape) {
+  .save {
+    form {
+      .form-group:after {
+        left: 60%;
+      }
     }
   }
 }
