@@ -6,7 +6,7 @@
     .controller('CarDetailsController', CarDetailsController);
 
   /** @ngInject */
-  function CarDetailsController($http, $log, $location, $scope, carDetailsService) {
+  function CarDetailsController($http, $log, $location, $scope, $cookies, carDetailsService) {
 
     // car year options
     var carYears = [];
@@ -31,7 +31,6 @@
     };
 
     $scope.getCarModel = function() {
-      console.log($scope.selectedCarMake);
       var url = 'https://forms.smartfinancial.com/api/v1/vehicle/models?year=' + $scope.selectedCarYear + '&make=' + $scope.selectedCarMake + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
       $http.get(url)
         .success(function(result) {
@@ -50,8 +49,16 @@
       if(carYear !== '' && carMake !== '' && carModel !== '') {
         $location.path('/state');
         carDetailsService.setData(carYear, carMake, carModel);
+        $cookies.put('carYear', carYear);
+        $cookies.put('carMake', carMake);
+        $cookies.put('carModel', carModel);
+        console.log($cookies);
       } else if (carYear !== undefined && carMake !== undefined && carModel !== undefined) {
         $location.path('/state');
+        carDetailsService.setData(carYear, carMake, carModel);
+        $cookies.put('carYear', carYear);
+        $cookies.put('carMake', carMake);
+        $cookies.put('carModel', carModel);
         carDetailsService.setData(carYear, carMake, carModel);
       } else {
         $location.path('/driver-details');

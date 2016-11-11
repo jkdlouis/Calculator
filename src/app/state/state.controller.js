@@ -6,7 +6,7 @@
     .controller('StateController', StateController);
 
   /** @ngInject */
-  function StateController($location, $scope, stateService) {
+  function StateController($location, $scope, $cookies, stateService) {
 
     $scope.usStates = [
       {
@@ -221,9 +221,11 @@
       if(usState !== '') {
         $location.path('/insurance');
         stateService.setData(usState);
+        $cookies.put('usState', usState);
       } else if (usState !== undefined) {
         $location.path('/insurance');
         stateService.setData(usState);
+        $cookies.put('usState', usState);
       } else {
         $location.path('/state');
       }

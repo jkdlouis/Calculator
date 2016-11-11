@@ -90,10 +90,11 @@ and (orientation: portrait) {
       margin-top: 0;
       margin-bottom: 10px;
       font-size: 21px;
+      margin-left: -2%
     }
     h4 {
       font-size: 16px;
-      margin-left: -6%;
+      margin-left: -5%;
     }
     form {
       .wrapper {
@@ -122,7 +123,7 @@ and (orientation: portrait) {
     .premium-box {
       margin-top: 15px;
       margin-bottom: 15px;
-      margin-left: 12%;
+      margin-left: 10%;
     }
     .pop-up-box {
       margin-top: 10px;
@@ -144,7 +145,7 @@ and (orientation: portrait) {
        }
      }
      .premium-box {
-       margin-left: 17%;
+       margin-left: 14%;
      }
    }
 }
@@ -169,13 +170,20 @@ and (orientation: portrait) {
       }
     }
     .premium-box {
-      margin-left: 12%;
+      margin-left: 10%;
       margin-top: 10px;
       margin-bottom: 10px;
     }
   }
 }
 
+//iphone 5 landscape
+
+@media only screen and (device-width : 568px) and (orientation : landscape) {
+   .premium-box {
+     margin-left: 14%;
+   }
+}
 //ipad
 
 @media only screen and (device-width: 768px) and (orientation : portrait) {
@@ -184,9 +192,12 @@ and (orientation: portrait) {
       .form-group:after {
         left: 38%;
       }
+      .form-group.checkbox-group {
+        margin-left: -4%;
+      }
     }
     .premium-box {
-      margin-left: 17%;
+      margin-left: 14.5%;
     }
   }
 }

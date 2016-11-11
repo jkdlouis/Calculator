@@ -41,9 +41,6 @@ body {
   line-height: 1.428571429;
   color: #333333;
   margin: 0;
-  select option {
-    background-color: white;
-  }
 }
   .car-details, .save, .insurance, .state, .header {
     padding: 2rem;
@@ -87,9 +84,6 @@ body {
       display: block;
       text-align: center;
    }
-    select.form-control option {
-      background-color: white;
-    }
   }
 
   button {
