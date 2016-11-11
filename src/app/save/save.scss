@@ -82,7 +82,7 @@
 
 //mobile portrait
 
-@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+@media screen and (min-device-width: 320px) and (max-device-width: 450px)
 and (orientation: portrait) {
   .save {
     padding: 1rem;
@@ -208,6 +208,56 @@ and (orientation: portrait) {
       .form-group:after {
         left: 60%;
       }
+    }
+  }
+}
+
+//small screen
+
+@media only screen and (min-width: 200px ) and (max-width: 318px) {
+  .save {
+    padding: 1rem;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 21px;
+      margin-left: -2%
+    }
+    h4 {
+      font-size: 16px;
+      margin-left: -5%;
+    }
+    form {
+      .wrapper {
+        align-items: baseline;
+        flex-direction: column;
+        margin-left: 4%;
+        label.checkbox-inline {
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+      .form-group {
+        margin-bottom: 10px;
+        select.form-control {
+          margin-left: -6%;
+        }
+      }
+      .form-group:after {
+        right: 7%;
+        top: 60px;
+      }
+    }
+    .animate-if {
+      padding: 5px;
+    }
+    .premium-box {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: 10%;
+    }
+    .pop-up-box {
+      margin-top: 10px;
     }
   }
 }

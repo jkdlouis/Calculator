@@ -12,7 +12,7 @@
 
 //mobile portrait
 
-@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+@media screen and (min-device-width: 320px) and (max-device-width: 450px)
 and (orientation: portrait) {
   .car-details {
     padding: 1rem;
@@ -39,6 +39,19 @@ and (orientation: portrait) {
   .car-details {
     button {
       bottom: 40rem;
+    }
+  }
+}
+
+//small screen
+
+@media only screen and (min-width: 200px ) and (max-width: 318px) {
+  .car-details {
+    padding: 1rem;
+    button {
+      right: 35%;
+      bottom: -11rem;
+      margin-bottom: 1rem;
     }
   }
 }

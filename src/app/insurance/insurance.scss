@@ -31,7 +31,7 @@
 
 //mobile portrait
 
-@media screen and (min-device-width: 300px) and (max-device-width: 450px)
+@media screen and (min-device-width: 320px) and (max-device-width: 450px)
 and (orientation: portrait) {
   .insurance {
     padding: 1rem;
@@ -81,6 +81,28 @@ and (orientation: portrait) {
   .insurance {
     button {
       bottom: 40rem;
+    }
+  }
+}
+
+//small screen
+
+@media only screen and (min-width: 200px ) and (max-width: 318px) {
+  .insurance {
+    padding: 1rem;
+    h2 {
+      margin-bottom: 10px;
+    }
+    .form-group input {
+      width: 100%;
+    }
+    .form-group:after {
+      top: 51%;
+    }
+    button {
+      right: 35%;
+      bottom: -15rem;
+      margin-bottom: 1rem;
     }
   }
 }

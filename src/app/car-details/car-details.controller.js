@@ -52,7 +52,6 @@
         $cookies.put('carYear', carYear);
         $cookies.put('carMake', carMake);
         $cookies.put('carModel', carModel);
-        console.log($cookies);
       } else if (carYear !== undefined && carMake !== undefined && carModel !== undefined) {
         $location.path('/state');
         carDetailsService.setData(carYear, carMake, carModel);
