@@ -9,10 +9,11 @@
     }
     .form-group select.form-control {
       margin-top: 20px;
+      width: 80%;
     }
     .form-group:after {
       top: 45px;
-      right: 44%;
+      right: 21%;
       padding: 0 15px 2px;
     }
     .form-group.checkbox-group:after {
@@ -35,24 +36,6 @@
       cursor: pointer;
     }
   }
-  .animate-if {
-    background:white;
-    padding:10px;
-  }
-
-  .animate-if.ng-enter, .animate-if.ng-leave {
-    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  }
-
-  .animate-if.ng-enter,
-  .animate-if.ng-leave.ng-leave-active {
-    opacity:0;
-  }
-
-  .animate-if.ng-leave,
-  .animate-if.ng-enter.ng-enter-active {
-    opacity:1;
-  }
   .premium-box {
     border: 1px solid $mediumGray;
     background-color: #59DA9A;
@@ -70,22 +53,22 @@
     background-color: orange;
     padding: 20px;
     margin-top: 50px;
-    button {
-      width: 200px;
+    button.quote-btn {
+      width: auto;
       margin-bottom: 10px;
     }
-    button a {
+    button.quote-btn a {
       color: white;
     }
   }
   }
 
+
 //mobile portrait
 
-@media screen and (min-device-width: 320px) and (max-device-width: 450px)
+@media screen and (min-device-width: 320px) and (max-device-width: 550px)
 and (orientation: portrait) {
   .save {
-    padding: 1rem;
     h2 {
       margin-top: 0;
       margin-bottom: 10px;
@@ -113,7 +96,7 @@ and (orientation: portrait) {
         }
       }
       .form-group:after {
-        right: 7%;
+        right: 26%;
         top: 43px;
       }
     }
@@ -133,15 +116,15 @@ and (orientation: portrait) {
 
 //mobile landscape
 
-@media (min-width:550px) and (max-width:750px) and (orientation: landscape) {
+@media (min-device-width:550px) and (max-device-width:750px) and (orientation: landscape) {
    .save {
      form {
        .form-group:after {
-         top: 50%;
-         right: 50%;
+         right: 0;
        }
        .form-group select.form-control {
          margin-left: 0;
+         width: 100%;
        }
      }
      .premium-box {
@@ -167,6 +150,8 @@ and (orientation: portrait) {
       }
       .form-group select.form-control {
         font-size: 12px;
+        width: 100%;
+
       }
     }
     .premium-box {
@@ -180,24 +165,38 @@ and (orientation: portrait) {
 //iphone 5 landscape
 
 @media only screen and (device-width : 568px) and (orientation : landscape) {
-   .premium-box {
-     margin-left: 14%;
+   .save {
+     .premium-box {
+       margin-left: 14%;
+     }
+     form {
+       .form-group select.form-control {
+         width: 100%;
+       }
+     }
    }
-}
+   }
+
 //ipad
 
 @media only screen and (device-width: 768px) and (orientation : portrait) {
   .save {
     form {
-      .form-group:after {
-        left: 38%;
-      }
       .form-group.checkbox-group {
         margin-left: -4%;
       }
     }
+    .form-group select.form-control {
+      width: 100%;
+    }
     .premium-box {
-      margin-left: 14.5%;
+      margin-left: -12%;
+    }
+    .form-group select.form-control {
+      width: 100%;
+    }
+    .form-group:after {
+      top: 0;
     }
   }
 }
@@ -205,6 +204,9 @@ and (orientation: portrait) {
 @media only screen and (device-width: 1024px) and (orientation : landscape) {
   .save {
     form {
+      .form-group select.form-control {
+        width: 100%;
+      }
       .form-group:after {
         left: 60%;
       }
@@ -214,50 +216,12 @@ and (orientation: portrait) {
 
 //small screen
 
-@media only screen and (min-width: 200px ) and (max-width: 318px) {
+@media only screen and (min-width: 100px) and (max-width: 390px) {
   .save {
-    padding: 1rem;
-    h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 21px;
-      margin-left: -2%
-    }
-    h4 {
-      font-size: 16px;
-      margin-left: -5%;
-    }
     form {
-      .wrapper {
-        align-items: baseline;
-        flex-direction: column;
-        margin-left: 4%;
-        label.checkbox-inline {
-          font-size: 12px;
-          width: 100%;
-        }
-      }
-      .form-group {
-        margin-bottom: 10px;
-        select.form-control {
-          margin-left: -6%;
-        }
-      }
       .form-group:after {
-        right: 7%;
-        top: 60px;
+        top: 63px;
       }
-    }
-    .animate-if {
-      padding: 5px;
-    }
-    .premium-box {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      margin-left: 10%;
-    }
-    .pop-up-box {
-      margin-top: 10px;
     }
   }
 }

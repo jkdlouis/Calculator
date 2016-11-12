@@ -1,4 +1,6 @@
 .insurance {
+  padding: 1rem;
+
   h2 {
     margin-bottom: 50px;
   }
@@ -22,19 +24,13 @@
   {
     background-color:#FFF;
   }
-  button {
-    position: absolute;
-    bottom: 50px;
-    right: 45%;
-  }
 }
 
 //mobile portrait
 
-@media screen and (min-device-width: 320px) and (max-device-width: 450px)
+@media screen and (min-device-width: 100px) and (max-device-width: 770px)
 and (orientation: portrait) {
   .insurance {
-    padding: 1rem;
     h2 {
       margin-bottom: 10px;
     }
@@ -44,16 +40,12 @@ and (orientation: portrait) {
     .form-group:after {
       top: 51%;
     }
-    button {
-      right: 38%;
-      bottom: 6rem;
-    }
   }
 }
 
 //mobile landscape
 
-@media (min-width:550px) and (max-width:750px) and (orientation: landscape) {
+@media (min-width:100px) and (max-width:780px) and (orientation: landscape) {
   .insurance {
     h2 {
       margin-bottom: 10px;
@@ -69,9 +61,6 @@ and (orientation: portrait) {
       margin-top: 20px;
       margin-left: 23%;
     }
-    button {
-      bottom: -150px;
-    }
   }
 }
 
@@ -79,17 +68,16 @@ and (orientation: portrait) {
 
 @media only screen and (device-width: 768px) and (orientation : portrait) {
   .insurance {
-    button {
-      bottom: 40rem;
+    .form-group:after {
+      top: 75px;
     }
   }
 }
 
 //small screen
 
-@media only screen and (min-width: 200px ) and (max-width: 318px) {
+@media only screen and (min-width: 100px ) and (max-width: 318px) {
   .insurance {
-    padding: 1rem;
     h2 {
       margin-bottom: 10px;
     }
@@ -97,12 +85,7 @@ and (orientation: portrait) {
       width: 100%;
     }
     .form-group:after {
-      top: 51%;
-    }
-    button {
-      right: 35%;
-      bottom: -15rem;
-      margin-bottom: 1rem;
+      top: 60%;
     }
   }
 }
