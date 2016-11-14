@@ -32,3 +32,20 @@ and (orientation: portrait) {
   }
 }
 
+//@media (min-width:760px) and (max-width:780px) and (orientation: landscape) {
+//  .state {
+//    .form-group:after {
+//      top: 69%;
+//      right: 0;
+//    }
+//  }
+//}
+//ipad portrait
+
+@media (device-width: 768px) and (orientation: portrait) {
+  .state {
+    .form-group:after {
+      top: 37px;
+    }
+  }
+}
