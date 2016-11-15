@@ -1,7 +1,6 @@
 .save {
   h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 10px 0;
   }
   form {
     .form-group select.form-control {
@@ -10,7 +9,7 @@
     }
     .form-group:after {
       top: 45px;
-      right: 21%;
+      right: 20%;
       padding: 0 15px 2px;
     }
     .form-group.checkbox-group:after {
@@ -22,7 +21,7 @@
       align-items: flex-end;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-left: 2%;
+      margin-left: 4%;
       label.checkbox-inline {
         margin: 10px 45px 10px -10px;
         padding-left: 0;
@@ -68,19 +67,16 @@ and (orientation: portrait) {
   .save {
     padding: 0;
     h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 21px;
+      font-size: 20px;
     }
     h4 {
-      font-size: 16px;
-      margin-left: -5%;
+      font-size: 13px;
     }
     form {
       .wrapper {
         align-items: baseline;
         flex-direction: column;
-        margin-left: 4%;
+        //margin-left: 4%;
         label.checkbox-inline {
           font-size: 12px;
           width: 100%;
@@ -94,7 +90,7 @@ and (orientation: portrait) {
       }
       .form-group:after {
         right: 1%;
-        top: 43px;
+        top: 40px;
       }
     }
     .animate-if {
@@ -103,7 +99,7 @@ and (orientation: portrait) {
     .premium-box {
       margin-top: 15px;
       margin-bottom: 15px;
-      width: 100%;
+      width: 70%;
 
     }
     .pop-up-box {
@@ -116,18 +112,22 @@ and (orientation: portrait) {
 
 @media (min-device-width:550px) and (max-device-width:750px) and (orientation: landscape) {
    .save {
+     h2 {
+       font-size: 20px;
+     }
+     h4 {
+       font-size: 13px;
+     }
      form {
        .form-group:after {
-         right: 0;
+         right: 40%;
+         top: 40px;
        }
        .form-group select.form-control {
          margin-left: 0;
-         width: 100%;
+         width: 60%;
        }
      }
-     //.premium-box {
-     //  margin-left: 14%;
-     //}
    }
 }
 
@@ -137,7 +137,7 @@ and (orientation: portrait) {
   .save {
     padding: 0;
     h2 {
-      font-size: 18px;
+      font-size: 20px;
     }
     h4 {
       font-size: 13px;
@@ -154,9 +154,7 @@ and (orientation: portrait) {
       }
     }
     .premium-box {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: 100%;
+      width: 70%;
     }
   }
 }
@@ -167,7 +165,7 @@ and (orientation: portrait) {
    .save {
      form {
        .form-group select.form-control {
-         width: 100%;
+         width: 60%;
        }
      }
    }
@@ -177,15 +175,14 @@ and (orientation: portrait) {
 
 @media only screen and (device-width: 768px) and (orientation : portrait) {
   .save {
+    padding: 1rem;
     form {
-    .form-group select.form-control {
-      width: 100%;
-    }
-    .form-group select.form-control {
-      width: 100%;
-    }
-    .form-group:after {
-      top: 0;
+      .form-group select.form-control {
+        width: 60%;
+      }
+      .form-group:after {
+        right: 40%;
+      }
     }
   }
 }
@@ -216,7 +213,7 @@ and (orientation: portrait) {
         width: 100%;
       }
       .form-group:after {
-        top: 63px;
+        top: 64px;
         right: 1%;
       }
     }

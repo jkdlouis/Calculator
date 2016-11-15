@@ -59,7 +59,7 @@ body {
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    right: 1%;
+    right: 0;
     /*Adjust for position however you want*/
     top: 56px;
     padding: 0 0 2px;
@@ -102,9 +102,15 @@ body {
     color: white;
   }
 
+  //extra classes
+
   .spacer-10 {
     height: 10rem;
   }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 
   //custom form validation
 

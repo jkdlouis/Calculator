@@ -16,7 +16,7 @@
         savedData = {
           insuranceCompany: value1,
           amount: value2,
-          fixedAmount: value3,
+          fixedAmount: value3
         }
       }
     };
