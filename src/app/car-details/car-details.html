@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="row car-details text-center">
-  <form id="carDetailsForm" name="carDetailsForm" ng-submit="goTo(carDetailsForm.$invalid)" novalidate>
+  <form id="carDetailsForm" name="carDetailsForm" ng-submit="goTo(carDetailsForm.$invalid)" ng-init="initialize()" novalidate>
     <div class="form-inline">
       <div class="col-xs-12 col-md-4">
         <div class="form-group" ng-class="{'has-error' : carDetailsForm.carYear.$invalid && carDetailsForm.carYear.$dirty}">

@@ -8,7 +8,7 @@
 </div>
 <div class="row text-center">
   <div class="col-xs-12">
-    <form id="stateForm" name="stateForm" ng-submit="goTo(stateForm.$invalid)" novalidate>
+    <form id="stateForm" name="stateForm" ng-submit="goTo(stateForm.$invalid)" ng-init="initialize()" novalidate>
   <div class="form-inline">
     <div class="form-group" ng-class="{'has-error' : stateForm.usState.$invalid && stateForm.usState.$dirty}">
     <select class="form-control" name="usState" ng-model="selectedState" ng-options="usState.name for usState in usStates" ng-required="true" required>

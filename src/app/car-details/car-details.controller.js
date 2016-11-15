@@ -15,9 +15,21 @@
       carYears.push(i);
     }
 
+		$scope.initialize = function() {
+			var data = carDetailsService.getData();
+			if(data) {
+				$scope.selectedCarYear = data.year;
+				$scope.selectedCarMake = data.make;
+				$scope.selectedCarModel = data.model;
+				$scope.getCarMake();
+				$scope.getCarModel();
+			}
+		}
+
     $scope.getCarMake = function() {
       var chosenYear = $scope.selectedCarYear;
       var edmundsUrl = 'https://forms.smartfinancial.com/api/v1/vehicle/makes?year=' + chosenYear + '&token=yhQwEoXKZU4y8RntnibxFmoy29UJqArr';
+			console.log("Scope: " + $scope.selectedCarYear);
 
       if (chosenYear >= 1990) {
         $http.get(edmundsUrl)

@@ -7,6 +7,15 @@
 
   /** @ngInject */
   function InsuranceController($location, $scope, $cookies, insuranceService) {
+	
+		$scope.initialize = function() {
+			var data = insuranceService.getData();
+			if(data) {
+				var insco = $scope.insuranceCompanies.filter(function(obj) { return obj.name === data.insuranceCompany.name })[0];
+				$scope.selectedInsuranceComp = insco;
+				$scope.premiumAmount = data.fixedAmount;
+			}
+		}
 
     $scope.insuranceCompanies = [
       {

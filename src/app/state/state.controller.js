@@ -7,6 +7,15 @@
 
   /** @ngInject */
   function StateController($location, $scope, $cookies, stateService) {
+	
+		$scope.initialize = function() {
+			var data = stateService.getData();
+			if(data) {
+				var usState = $scope.usStates.filter(function(obj) { return obj.code === data.code })[0];
+				$scope.selectedState = usState;
+			}
+		}
+		
 
     $scope.usStates = [
       {
