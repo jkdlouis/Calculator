@@ -28,7 +28,7 @@
 
 //mobile portrait
 
-@media screen and (min-device-width: 100px) and (max-device-width: 770px)
+@media screen and (min-device-width: 301px) and (max-device-width: 770px)
 and (orientation: portrait) {
   .insurance {
     h2 {
@@ -38,14 +38,14 @@ and (orientation: portrait) {
       width: 100%;
     }
     .form-group:after {
-      top: 51%;
+      top: 45px;
     }
   }
 }
 
 //mobile landscape
 
-@media (min-width:100px) and (max-width:780px) and (orientation: landscape) {
+@media (min-width:300px) and (max-width:780px) and (orientation: landscape) {
   .insurance {
     h2 {
       margin-bottom: 10px;
@@ -76,7 +76,7 @@ and (orientation: portrait) {
 
 //small screen
 
-@media only screen and (min-width: 100px ) and (max-width: 318px) {
+@media only screen and (min-width: 100px ) and (max-width: 300px) {
   .insurance {
     h2 {
       margin-bottom: 10px;
@@ -85,7 +85,7 @@ and (orientation: portrait) {
       width: 100%;
     }
     .form-group:after {
-      top: 51%;
+      top: 64px;
     }
   }
 }
