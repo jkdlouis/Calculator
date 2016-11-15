@@ -6,7 +6,7 @@
     .controller('CarDetailsController', CarDetailsController);
 
   /** @ngInject */
-  function CarDetailsController($http, $log, $location, $scope, $cookies, carDetailsService) {
+  function CarDetailsController($http, $location, $scope, $cookies, carDetailsService) {
 
     // car year options
     var carYears = [];
@@ -23,9 +23,10 @@
         $http.get(edmundsUrl)
           .success(function(result) {
             $scope.carMakes = result.makes;
+            console.log(result);
           })
           .error(function(data) {
-            $log(data);
+            console.log(data);
           });
       }
     };
@@ -37,7 +38,7 @@
           $scope.carModels = result.models;
         })
         .error(function(data) {
-          $log(data);
+          console.log(data);
         });
 
     };
