@@ -45,7 +45,7 @@ and (orientation: portrait) {
 
 //mobile landscape
 
-@media (min-width:300px) and (max-width:780px) and (orientation: landscape) {
+@media (min-width:300px) and (max-width:760px) and (orientation: landscape) {
   .insurance {
     h2 {
       margin-bottom: 10px;
@@ -60,6 +60,15 @@ and (orientation: portrait) {
     .form-group input.form-control {
       margin-top: 20px;
       margin-left: 23%;
+    }
+  }
+}
+
+@media (min-width: 761px) and (max-width: 767px)  {
+  .insurance {
+    .form-group:after {
+      top: 75px;
+      right: 58%;
     }
   }
 }

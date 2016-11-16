@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function InsuranceController($location, $scope, $cookies, insuranceService) {
-	
+
 		$scope.initialize = function() {
 			var data = insuranceService.getData();
 			if(data) {
@@ -15,7 +15,7 @@
 				$scope.selectedInsuranceComp = insco;
 				$scope.premiumAmount = data.fixedAmount;
 			}
-		}
+		};
 
     $scope.insuranceCompanies = [
       {

@@ -2,4 +2,11 @@
   padding: 1rem;
 }
 
-
+@media (min-width: 761px) and (max-width: 768px){
+  .car-details {
+    .form-group:after {
+      top: 6px;
+      right: 57%;
+    }
+  }
+}

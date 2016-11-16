@@ -23,7 +23,7 @@ and (orientation: portrait) {
 
 //mobile landscape
 
-@media (min-width:100px) and (max-width:780px) and (orientation: landscape) {
+@media (min-width:100px) and (max-width:760px) and (orientation: landscape) {
   .state {
     .form-group:after {
       top: 12%;
@@ -31,6 +31,15 @@ and (orientation: portrait) {
     }
     .form-group select.form-control {
       margin-top: 30px;
+    }
+  }
+}
+
+@media (min-width: 761px) and (max-width: 767px)  {
+  .state {
+    .form-group:after {
+      top: 6px;
+      right: 57%;
     }
   }
 }
