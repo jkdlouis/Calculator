@@ -110,7 +110,7 @@ and (orientation: portrait) {
 
 //mobile landscape
 
-@media (min-device-width:550px) and (max-device-width:800px) and (orientation: landscape) {
+@media (min-device-width:500px) and (max-device-width:800px) and (orientation: landscape) {
    .save {
      h2 {
        font-size: 20px;
